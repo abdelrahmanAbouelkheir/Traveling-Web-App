@@ -58,6 +58,7 @@ app.post('/', function(req, res){
   }
    else if(u=='admin'&&p=='admin'){
     req.session.username = u
+     req.session.save();
     res.redirect('home');
   }
 
