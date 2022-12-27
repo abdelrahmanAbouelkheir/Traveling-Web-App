@@ -187,17 +187,17 @@ app.get('/islands',check, function(req, res){
 app.get('/wanttogo',check, function(req, res){
   
   var user = req.session.username;
+  res.render('wanttogo');
+//   MongoClient.connect("mongodb://localhost:27017/myDB", function(err, db){
+//       if (err) throw err;
+//       var dbo = db.db("myDB");
 
-  MongoClient.connect("mongodb://localhost:27017/myDB", function(err, db){
-      if (err) throw err;
-      var dbo = db.db("myDB");
-
-      dbo.collection("myCollection").find({username:user}).toArray(function(err, result) {
-        if (err) throw err;
-        res.render('wanttogo',{result});
-        db.close();
-      });  
-    });
+//       dbo.collection("myCollection").find({username:user}).toArray(function(err, result) {
+//         if (err) throw err;
+//         res.render('wanttogo',{result});
+//         db.close();
+//       });  
+//     });
 
 });
 
