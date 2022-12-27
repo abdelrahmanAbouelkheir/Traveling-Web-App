@@ -187,7 +187,7 @@ app.get('/islands',check, function(req, res){
 app.get('/wanttogo',check, function(req, res){
   
   var user = req.session.username;
-  res.render('wanttogo');
+  res.render('wanttogo',{result:{}});
 //   MongoClient.connect("mongodb://localhost:27017/myDB", function(err, db){
 //       if (err) throw err;
 //       var dbo = db.db("myDB");
