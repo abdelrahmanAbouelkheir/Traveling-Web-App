@@ -159,7 +159,7 @@ app.post('/registration', function(req, res){
 });
 
 // Home page
-app.get('/home',check,function(req, res){
+app.get('/home',function(req, res){
   // var queryObj =  url.parse(req.url,true).query
   // var username = queryObj.user;
   // console.log(username);
@@ -168,24 +168,24 @@ app.get('/home',check,function(req, res){
 //
 
 // Hiking
-app.get('/hiking',check, function(req, res){
+app.get('/hiking', function(req, res){
  
   res.render('hiking');
 });
 
 // Cities
-app.get('/cities',check, function(req, res){
+app.get('/cities', function(req, res){
   
   res.render('cities');
 });
 
 // Islands
-app.get('/islands',check, function(req, res){
+app.get('/islands', function(req, res){
   res.render('islands',);
 });
 
 // Want To Go
-app.get('/wanttogo',check, function(req, res){
+app.get('/wanttogo', function(req, res){
   
   
   res.render('wanttogo',{result:{}});
@@ -204,7 +204,7 @@ app.get('/wanttogo',check, function(req, res){
 
 
 // Inca
-app.get('/inca',check, function(req, res){
+app.get('/inca', function(req, res){
   if(req.session.added&&req.session.added=='done'){
     res.render('inca',{added:"Already Added"});
     req.session.added = undefined;
@@ -216,7 +216,7 @@ app.get('/inca',check, function(req, res){
   }
 });
 // Annapurna
-app.get('/annapurna',check, function(req, res){
+app.get('/annapurna', function(req, res){
   if(req.session.added&&req.session.added=='done'){
     res.render('annapurna',{added:"Already Added"});
     req.session.added = undefined;
@@ -228,7 +228,7 @@ app.get('/annapurna',check, function(req, res){
   }
 });
 // Paris
-app.get('/paris',check, function(req, res){
+app.get('/paris', function(req, res){
   if(req.session.added&&req.session.added=='done'){
     res.render('paris',{added:"Already Added"});
     req.session.added = undefined;
@@ -243,7 +243,7 @@ app.post('/paris', function(req, res){
   
 });
 // Rome
-app.get('/rome',check, function(req, res){
+app.get('/rome', function(req, res){
   if(req.session.added&&req.session.added=='done'){
     res.render('rome',{added:"Already Added"});
     req.session.added = undefined;
@@ -256,7 +256,7 @@ app.get('/rome',check, function(req, res){
 });
 
 // Bali
-app.get('/bali',check, function(req, res){
+app.get('/bali', function(req, res){
 
   if(req.session.added&&req.session.added=='done'){
     res.render('bali',{added:"Already Added"});
@@ -270,7 +270,7 @@ app.get('/bali',check, function(req, res){
 });
 
 // Santorini
-app.get('/santorini',check, function(req, res){
+app.get('/santorini', function(req, res){
   if(req.session.added&&req.session.added=='done'){
     res.render('santorini',{added:"Already Added"});
     req.session.added = undefined;
@@ -283,7 +283,7 @@ app.get('/santorini',check, function(req, res){
 });
 
 // Search results
-app.get('/searchresults',check, function(req, res){
+app.get('/searchresults', function(req, res){
   res.render('searchresults');
 });
 app.post('/searchresults', function(req, res){
@@ -291,7 +291,7 @@ app.post('/searchresults', function(req, res){
 });
 
 
-app.post('/search',check, function(req, res){
+app.post('/search', function(req, res){
   var user = req.session.username;
 
   var destinations = ["bali island","santorini island","paris","rome","inca trail to machu picchu","annapurna circuit"];
@@ -309,7 +309,7 @@ app.post('/search',check, function(req, res){
   res.render('searchresults', {searchRes});
 });
 
-app.post('/add',check,function(req,res){
+app.post('/add',function(req,res){
 
   var queryObj = url.parse(req.url,true).query;
 
