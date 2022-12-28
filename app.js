@@ -61,44 +61,47 @@ app.post('/', function(req, res){
      req.session.save();
     res.redirect('home');
   }
-
-
-  else if(!(u==""||p=="")){
-    
-    MongoClient.connect("mongodb://localhost:27017/myDB", function(err, db){
-
-      if (err) throw err;
-      var dbo = db.db("myDB");
-
-      dbo.collection("myCollection").findOne({username:u,password:p}, function(err, result) {
-
-        if (err) throw err;
-
-        if(result==null){
-          //var myobj = { username: u, password: p };
-          req.session.wrongUorP = true
-          res.redirect('/');
-
-        }else{
-
-          req.session.username = u
-          res.redirect('home');
-          
-          // res.redirect(url.format({
-          //   pathname:"/home",
-          //   query: {
-          //      "user": u
-          //    }
-          //}));
-         
-        }
-
-        db.close();
-
-      });
-        
-    }); 
+  else {
+     res.redirect('/');
   }
+
+
+//   else if(!(u==""||p=="")){
+    
+//     MongoClient.connect("mongodb://localhost:27017/myDB", function(err, db){
+
+//       if (err) throw err;
+//       var dbo = db.db("myDB");
+
+//       dbo.collection("myCollection").findOne({username:u,password:p}, function(err, result) {
+
+//         if (err) throw err;
+
+//         if(result==null){
+//           //var myobj = { username: u, password: p };
+//           req.session.wrongUorP = true
+//           res.redirect('/');
+
+//         }else{
+
+//           req.session.username = u
+//           res.redirect('home');
+          
+//           // res.redirect(url.format({
+//           //   pathname:"/home",
+//           //   query: {
+//           //      "user": u
+//           //    }
+//           //}));
+         
+//         }
+
+//         db.close();
+
+//       });
+        
+//     }); 
+//   }
   //if credentials are correct
     //res.render('home');
   //else
