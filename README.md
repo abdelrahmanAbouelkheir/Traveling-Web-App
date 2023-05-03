@@ -1,4 +1,19 @@
 # Traveling-Web-App
+
+
+##Screenshots
+
+<p float="left">
+  <img src="" width="400" height="350" />
+ <img src="" width="400" height="350" />
+ <br></br>
+  <img src="" width="400" height="350" />
+<img src="" width="400" height="350" />
+<br></br>
+  <img src="" width="700" height="350" />
+</p>
+
+
  ## Introduction
  A web application that is used as a simple travelling website. The website allows the users to lookup several travelling destinations. Users should
    be allowed to create an account, add places to their “want-to-go list” and search for travelling destinations. 
