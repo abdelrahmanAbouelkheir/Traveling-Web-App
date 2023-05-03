@@ -29,11 +29,11 @@ don’t copy the video itself to the folder so that it doesn’t exceed the allo
 “want-to-go list” in the database. If the destination was already in the user’s list, you should display
 an error message and don’t add the duplicate destination.
 6.  Want-to-Go List Page:
-   + The want-to-go list page contains the destinations that the user previously added using the “Add to
+    + The want-to-go list page contains the destinations that the user previously added using the “Add to
 Want-to-Go List” button. A “View Want-to-Go List” button should be added to the home page that
 directs the user to their own want-to-go list page.
 7.  Search:
-   + A search bar will be displayed in all pages except for registration and login pages. The search will
+    + A search bar will be displayed in all pages except for registration and login pages. The search will
 be done using destinations names only. The search result is either a “Destination not Found”
 message if the destination was not available in the database, or a list of the destinations that contain
 the search keyword in their names (ex: searching for “div” should put “Maldives” as one of the
